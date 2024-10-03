@@ -1,0 +1,114 @@
+{
+    "agent_id": "e54df9d3-3781-40ae-9c2b-13754dec3acc",
+    "session_id": "487bbeb7-50c5-40ef-b0f2-4faaf5c2e1ed",
+    "conversation": [
+        {
+            "event": {
+                "payload": {
+                    "event_type": "turn_start",
+                    "turn_id": "fcd95524-0dc6-4d89-8564-d95c7b697069"
+                }
+            }
+        },
+        {
+            "event": {
+                "payload": {
+                    "event_type": "step_start",
+                    "step_type": "inference",
+                    "step_id": "37935484-b625-4a7e-94d2-7f15ae84e19b",
+                    "metadata": {}
+                }
+            }
+        },
+        {
+            "event": {
+                "payload": {
+                    "event_type": "step_complete",
+                    "step_type": "inference",
+                    "step_details": {
+                        "turn_id": "fcd95524-0dc6-4d89-8564-d95c7b697069",
+                        "step_id": "37935484-b625-4a7e-94d2-7f15ae84e19b",
+                        "started_at": null,
+                        "completed_at": null,
+                        "step_type": "inference",
+                        "model_response": {
+                            "role": "assistant",
+                            "content": "",
+                            "stop_reason": "end_of_turn",
+                            "tool_calls": [
+                                {
+                                    "call_id": "7bb5ce23-b13d-4b72-8b19-bf1e926ffcc8",
+                                    "tool_name": "get_color",
+                                    "arguments": {
+                                        "object_name": "cloud",
+                                        "format": "name"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "event": {
+                "payload": {
+                    "event_type": "turn_complete",
+                    "turn": {
+                        "turn_id": "fcd95524-0dc6-4d89-8564-d95c7b697069",
+                        "session_id": "487bbeb7-50c5-40ef-b0f2-4faaf5c2e1ed",
+                        "input_messages": [
+                            {
+                                "role": "user",
+                                "content": "Tell me the color of cloud?",
+                                "context": null
+                            }
+                        ],
+                        "steps": [
+                            {
+                                "turn_id": "fcd95524-0dc6-4d89-8564-d95c7b697069",
+                                "step_id": "37935484-b625-4a7e-94d2-7f15ae84e19b",
+                                "started_at": null,
+                                "completed_at": null,
+                                "step_type": "inference",
+                                "model_response": {
+                                    "role": "assistant",
+                                    "content": "",
+                                    "stop_reason": "end_of_turn",
+                                    "tool_calls": [
+                                        {
+                                            "call_id": "7bb5ce23-b13d-4b72-8b19-bf1e926ffcc8",
+                                            "tool_name": "get_color",
+                                            "arguments": {
+                                                "object_name": "cloud",
+                                                "format": "name"
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "output_message": {
+                            "role": "assistant",
+                            "content": "",
+                            "stop_reason": "end_of_turn",
+                            "tool_calls": [
+                                {
+                                    "call_id": "7bb5ce23-b13d-4b72-8b19-bf1e926ffcc8",
+                                    "tool_name": "get_color",
+                                    "arguments": {
+                                        "object_name": "cloud",
+                                        "format": "name"
+                                    }
+                                }
+                            ]
+                        },
+                        "output_attachments": [],
+                        "started_at": "2024-10-03T01:21:44.544061",
+                        "completed_at": "2024-10-03T01:21:45.567680"
+                    }
+                }
+            }
+        }
+    ]
+}

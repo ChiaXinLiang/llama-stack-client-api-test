@@ -18,15 +18,13 @@ import wget
 load_dotenv('.env.local')
 
 # Download the image
-image_url = "https://upload.wikimedia.org/wikipedia/commons/1/18/Dog_Breeds.jpg"
 local_image_path = "dog_breeds.jpg"
-wget.download(image_url, local_image_path)
-
 # Open the local image
 image = Image.open(local_image_path)
 buffered = BytesIO()
 image.save(buffered, format="PNG")
-img_str = base64.b64encode(buffered.getvalue()).decode()
+img_str = f"data:image/png;base64,{base64.b64encode(buffered.getvalue()).decode()}"
+print(img_str)
 
 async def test_chat_completion():
     """
